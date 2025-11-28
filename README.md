@@ -1,5 +1,7 @@
 # 📊 SLOOS Interactive Analyzer
 
+> **🤖 100% AI-Generated Project** - This entire application was developed by Kiro AI Software Engineer with zero human coding. From architecture to implementation, documentation to screenshots - all created through AI-assisted development in a single 2-hour session.
+
 Professional web application for analyzing Senior Loan Officer Opinion Survey (SLOOS) data using AWS Bedrock Claude AI.
 
 ![SLOOS Analyzer Dashboard](screenshots/dashboard.png)
