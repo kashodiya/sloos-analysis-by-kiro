@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SLOOS Interactive Analyzer</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <style>
         * {
             margin: 0;
@@ -135,7 +136,89 @@
             border-radius: 8px;
             margin-top: 20px;
             line-height: 1.6;
-            white-space: pre-wrap;
+        }
+        
+        .analysis-result h1, .analysis-result h2, .analysis-result h3 {
+            margin-top: 1em;
+            margin-bottom: 0.5em;
+            color: #667eea;
+        }
+        
+        .analysis-result ul, .analysis-result ol {
+            margin-left: 20px;
+            margin-bottom: 1em;
+        }
+        
+        .analysis-result p {
+            margin-bottom: 1em;
+        }
+        
+        .analysis-result code {
+            background: #e9ecef;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .analysis-result pre {
+            background: #e9ecef;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin-bottom: 1em;
+        }
+        
+        .analysis-result blockquote {
+            border-left: 4px solid #667eea;
+            padding-left: 15px;
+            margin: 1em 0;
+            color: #666;
+        }
+        
+        .message.assistant {
+            background: white;
+            border: 1px solid #dee2e6;
+        }
+        
+        .message.assistant h1, .message.assistant h2, .message.assistant h3 {
+            margin-top: 0.8em;
+            margin-bottom: 0.4em;
+            color: #667eea;
+        }
+        
+        .message.assistant ul, .message.assistant ol {
+            margin-left: 20px;
+            margin-bottom: 0.8em;
+        }
+        
+        .message.assistant p {
+            margin-bottom: 0.8em;
+        }
+        
+        .message.assistant code {
+            background: #f8f9fa;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .message.assistant pre {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 6px;
+            overflow-x: auto;
+            margin-bottom: 0.8em;
+        }
+        
+        .message.assistant blockquote {
+            border-left: 3px solid #667eea;
+            padding-left: 12px;
+            margin: 0.8em 0;
+            color: #666;
+        }
+        
+        .message.assistant strong {
+            color: #333;
         }
         
         .chat-container {
@@ -383,7 +466,7 @@
                 resultDiv.innerHTML = `
                     <div class="analysis-result">
                         <strong>Analysis for ${data.report_date}:</strong><br><br>
-                        ${data.analysis}
+                        ${marked.parse(data.analysis)}
                     </div>
                 `;
             } catch (error) {
@@ -440,7 +523,7 @@
                     // Add assistant response
                     chatMessages.innerHTML += `
                         <div class="message assistant">
-                            <strong>AI Assistant:</strong><br>${data.response}
+                            <strong>AI Assistant:</strong><br>${marked.parse(data.response)}
                         </div>
                     `;
                 }
