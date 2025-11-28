@@ -1,0 +1,25 @@
+[project]
+name = "sloos-analyzer"
+version = "0.1.0"
+description = "SLOOS Interactive Data Analysis Application"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.115.0",
+    "uvicorn>=0.32.0",
+    "boto3>=1.35.0",
+    "pandas>=2.2.0",
+    "sqlalchemy>=2.0.0",
+    "httpx>=0.27.0",
+    "python-multipart>=0.0.12",
+    "jinja2>=3.1.0",
+    "openpyxl>=3.1.0",
+    "beautifulsoup4>=4.12.0",
+    "lxml>=5.0.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
