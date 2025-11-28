@@ -1,8 +1,6 @@
-# 📊 SLOOS Interactive Analyzer
+# � SLOeOS Interactive Analyzer
 
 Professional web application for analyzing Senior Loan Officer Opinion Survey (SLOOS) data using AWS Bedrock Claude AI.
-
-![SLOOS Analyzer Dashboard](screenshots/dashboard.png)
 
 ## Features
 
@@ -128,14 +126,12 @@ See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed instructions.
 │   └── index.html         # Web interface
 ├── pyproject.toml         # Dependencies
 ├── sloos_data.db          # SQLite database (auto-created)
-├── screenshots/           # Application screenshots
 ├── README.md              # This file
 ├── INFO.md                # SLOOS background information
 ├── QUICKSTART.md          # Quick reference guide
 ├── SETUP.md               # Detailed setup instructions
 ├── LOCAL_SETUP.md         # Local development guide
-├── DEPLOYMENT.md          # Production deployment guide
-└── PROJECT_SUMMARY.md     # Executive summary with ROI analysis
+└── DEPLOYMENT.md          # Production deployment guide
 ```
 
 ## API Endpoints
@@ -158,7 +154,6 @@ See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed instructions.
 ## Documentation
 
 - [INFO.md](INFO.md) - Understanding SLOOS data
-- [PROJECT_SUMMARY.md](PROJECT_SUMMARY.md) - Executive summary & ROI analysis
 - [QUICKSTART.md](QUICKSTART.md) - Quick reference
 - [SETUP.md](SETUP.md) - Detailed setup
 - [LOCAL_SETUP.md](LOCAL_SETUP.md) - Local development
@@ -189,8 +184,6 @@ Solution: Change port in app.py or stop existing process
 - **Bedrock**: ~$0.003 per 1K input tokens, ~$0.015 per 1K output tokens
 - **Typical Analysis**: $0.01-0.05 per request
 - **EC2**: ~$30-50/month for t3.medium
-
-See [PROJECT_SUMMARY.md](PROJECT_SUMMARY.md) for detailed ROI analysis.
 
 ## License
 
